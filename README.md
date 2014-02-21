@@ -44,7 +44,7 @@ There are other scripts for checking hosts during and after reboots, see each sc
 
 ###Success!
 
-So reboots went great, right......right?
+So, reboots went great, right......right?
 
 ![](http://www.quickmeme.com/img/32/32f42e59792d736f15e2ef8d38271f358e834c6a034e329400a3962d5bb84333.jpg)
 
