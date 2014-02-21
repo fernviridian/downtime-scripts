@@ -27,8 +27,8 @@ After all the ssh connections to boxen are finished, run the grab logs script
 
 `root@server ./ssh-grab-logs.sh`
 
-While `ssh-update.sh` is running it will log all stdout to a file in `/root/ssh-update-log`
-The `ssh-grab-logs.sh` script will go collect those logs from each host and put them in the fqdn files created earlier with each hostname.
+While `ssh-update.sh` is running it will log all stdout to a file in `/root/ssh-update-log`.
+The `ssh-grab-logs.sh` script will collect those logs from each host and put them in the fqdn files created earlier with each hostname.
 
 ###When you're ready to reboot:
 
