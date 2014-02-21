@@ -7,11 +7,15 @@ downtime-scripts
 ###Update hosts
 First thing to do is to run the update script:
 
-Run the scripts from their current directory.
+Run the scripts from their the parent directory.
+```
+cd downtime-scripts
+root@server ~/downtime-scripts/
+cd update
+root@server ./ssh-update.sh
+```
 
-`root@server ./ssh-update.sh`
-
-This requires a list file where each line of the file is a FQDN hostname, and no other information. Should't be any comments or anything other and a list of hostnames. 
+This requires a list file where each line of the file is a FQDN hostname, and no other information. There should not be any comments or anything other and a list of hostnames. 
 This also assumes you have ssh keys on each host in the file and an ssh-agent running or a passphrase-less ssh key, and you are running the scripts from that host.
 
 This will concurently ssh to all the hosts in the file and start patching based on if the host is debian-like or centos-like and run the proper update commands.
@@ -23,15 +27,14 @@ After all the ssh connections to boxen are finished, run the grab logs script
 
 `root@server ./ssh-grab-logs.sh`
 
-While `ssh-update.sh` was running it was logging all the stdout to a file in /root/ssh-update-log
-The `ssh-grab-logs.sh` script will go collect those logs from each host and put them in the files we created earlier with each hostname.
-
+While `ssh-update.sh` is running it will logging all the stdout to a file in /root/ssh-update-log
+The `ssh-grab-logs.sh` script will go collect those logs from each host and put them in the fqdn files created earlier with each hostname.
 
 ###When you're ready to reboot:
 
 `root@server ./rebootboxen.bash`
 
-This will send reboot codes to all hosts in the list and they will shutdown in 5 minutes, with the message accordingly. 
+This will send reboot codes to all hosts in the list and they will shutdown in 5 minutes, with the message accordingly.
 
 ###Utilize the check scripts
 
