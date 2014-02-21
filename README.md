@@ -15,7 +15,7 @@ cd update
 root@server ./ssh-update.sh
 ```
 
-This requires a list file where each line of the file is a fqdn (fully qualified domain name ie, someserver.google.com) hostname, and no other information. There should not be any comments or anything other and a list of hostnames. 
+This requires a list file where each line of the file is a fqdn (fully qualified domain name eg, someserver.google.com) hostname, and no other information. There should not be any comments or anything other and a list of hostnames. 
 This also assumes you have ssh keys on each host in the file and an ssh-agent running or a passphrase-less ssh key, and you are running the scripts from that host.
 
 This will concurently ssh to all the hosts in the file and start patching based on if the host is debian-like or centos-like and run the proper update commands.
