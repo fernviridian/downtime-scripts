@@ -38,7 +38,7 @@ This will send reboot codes to all hosts in the list and they will shutdown in 5
 
 ###Utilize the check scripts
 
-The most useful is probably the checkifup.bash script. This will attempt to ping a host. If it pings, try to ssh to host. It records all output to a checkifup.output for review at a later time. If the host ssh's then it will run uptime which will give you an idea if the host rebooted, or for some reason it didn't then you can just do it manually. 
+The most useful is probably the checkifup.bash script. This will attempt to ping a host. If it pings, the script trys to ssh to the host. It records all output to a checkifup.output for review at a later time. If the host ssh's then it will run uptime which will give you an idea if the host rebooted, or for some reason it didn't then you can just do it manually. 
 
 checkifup.output:
 
